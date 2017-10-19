@@ -1,9 +1,11 @@
 [[ -s "/etc/default/evm" ]] && source "/etc/default/evm"
 
 # Aliases:
-alias ap='appliance_console'
-alias vmdb='cd /var/www/miq/vmdb'
+alias ap='bundle exec appliance_console'
 alias appliance='[[ -n ${APPLIANCE_SOURCE_DIRECTORY} ]] && cd ${APPLIANCE_SOURCE_DIRECTORY}'
+alias appliance_console='bundle exec appliance_console'
+alias appliance_console_cli='bundle exec appliance_console_cli'
+alias vmdb='cd /var/www/miq/vmdb'
 
 # Tail Logs:
 function tailmiq() #If no value is given with tailmiq it defaults to the evm.log
